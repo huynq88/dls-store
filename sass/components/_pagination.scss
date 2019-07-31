@@ -1,0 +1,10 @@
+.pagination_container {display: flex;align-items: center;
+  & > span {display: inline-block;margin-right: 5px}
+}
+.pagination_lst {display: flex;align-items: center}
+.pagination_number {background: $color-bg-third;display: inline-block;margin: 0 2px;padding: 2px 5px;min-width: 23px;text-align: center;
+  &.current {color: white;
+  }
+  &.break {}
+  @include border-radius(3px);
+}

@@ -1,0 +1,16 @@
+{% extends "../layout/layout.twig" %}
+{% block pageTitle %} Index {% endblock %}
+{% block pageDes %}{{ slogan }}{% endblock %}
+{% block page %}
+    <div id="page_home" class="page_main">
+        {% include "../layout/header.twig" %}
+        <div class="main_body">
+            <div class="container-custom">
+                {% include '../component/block_product_style1.twig' %}
+                {% include '../component/block_product_style2.twig' %}
+            </div>
+        </div>
+        {% include "../layout/footer/footer.twig" %}
+    </div>
+{% endblock %}
+

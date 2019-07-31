@@ -1,0 +1,37 @@
+#footer{background: white;padding: 0 15px;
+  @media (min-width: $bp-md) {
+    padding: 0;
+  }
+}
+.license {padding: 15px 0}
+
+.footer_logo {margin: 0;padding: 15px 0;text-align: center;
+  img {width: 160px}
+}
+.footer_col {margin-bottom: 30px;color: $color-text-third;}
+.footer_col_name {font-size: $font-size-m;margin: 0 0 15px;font-weight: normal;color: $color-text}
+.footer_col_body {}
+.footer_menu {
+  @extend %reset-lst;
+}
+.footer_menu_item {margin: 5px 0;
+  a {color: $color-text-third;display: inline-block;
+    &:hover {color: $color-text}
+  }
+}
+
+.fanpage {margin: 0 0 15px}
+.footer_app_btn {display: flex;justify-content: space-between;
+  a:hover{opacity: 0.7}
+}
+.footer_social {display: flex;
+  a {display: inline-block;margin: 0 5px;
+    &:hover {opacity: 0.8}
+  }
+}
+
+.footer_bottom {text-align: center}
+.footer_bottom_col {align-items: center;display: flex;justify-content: center;}
+.footer_social {}
+.footer_pay_card {font-size: 0}
+.footer_power_by {font-size: 0}

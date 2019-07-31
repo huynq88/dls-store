@@ -1,0 +1,85 @@
+//Input text
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {outline: none;}
+
+textarea {width: 100%;}
+input[type="checkbox"]{margin-right: 5px;vertical-align: middle}
+
+%input-text ,
+%reset-input {background: white;border: solid 1px $color-border-input;outline: none;padding: 5px 10px;box-shadow: none;color: $color-text-input}
+
+.option_style {font-size: 0;margin: 0 8px 0 0;display: inline-block;
+  .option_style_label {background: white;color: $color-text-input;display: block;text-align: center;outline: none;padding: 5px 15px;overflow: hidden;border: solid 1px $color-text-input;cursor: pointer;font-size: $font-size-xs;
+    @include border-radius(4px);
+    @include transition(all .3s ease);
+  }
+  &:last-child {margin: 0}
+  .option_style_input {opacity: 0;visibility: hidden;display: none}
+  //Action
+  .option_style_input:checked + .option_style_label {border-color: $color-text;color: $color-text}
+  .option_style_input:focus + .option_style_label {border-color: $color-text;color: $color-text}
+  .option_style_input:active + .option_style_label {border-color: $color-text;color: $color-text}
+}
+
+.select_wrap{border: solid 1px $color-border-input;position: relative;overflow: hidden;height: 30px;color: $color-text-input;
+  &::after {content: '';position: absolute;right: 8px;top: 50%;margin-top: -3px;
+    @include css-triangle(bottom,$color-border,6px,10px);
+  }
+  &:hover {border-color: $color-text;
+    &::after {border-top-color: $color-text}
+  }
+  @include border-radius(6px);
+
+  select.select_common {background: white;display: block;border: none;padding: 0 25px 0 10px;cursor: pointer;width: 100%;height: 100%;color: $color-text-input;
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none;  /*Removes default style Firefox*/
+    appearance: none;
+    &:focus {cursor: pointer;outline: none;}
+  }
+  &.tiny {height: 26px;font-size: $font-size-xs;@include border-radius(4px);}
+  &.small {height: 30px;font-size: $font-size-s;@include border-radius(4px);}
+  &.medium {height: 34px;font-size: $font-size-m;@include border-radius(6px);}
+  &.large {height: 40px;font-size: $font-size-m;@include border-radius(8px);}
+}
+
+.fieldset_common {border: none;margin: 0;padding: 0}
+.input_common {
+  @extend %input-text;
+  @include transition(all .3s ease);
+  @include border-radius(4px);
+
+  &:focus {box-shadow: none;border-color: $color-text}
+  &::placeholder {}
+  &.input_common--tiny {font-size: $font-size-xs;min-height: 26px;@include border-radius(4px);}
+  &.input_common--small {font-size: $font-size-s;min-height: 30px;@include border-radius(4px);}
+  &.input_common--medium {font-size: $font-size-m;min-height: 34px;@include border-radius(6px);}
+  &.input_common--large {font-size: $font-size-m;min-height: 40px;@include border-radius(8px);}
+  &.input_common--full {display: block;width: 100%}
+}
+
+.input_wrap {display: flex;
+  &--row {flex-direction: row;align-items: center;
+    label {margin: 0 15px 0 0}
+  }
+  &--column {flex-direction: column;}
+  .input_search {position: relative;
+    &::after {content: "\f002";font-family: "Font Awesome 5 Free";font-weight: 900;position: absolute;right: 10px;top: 50%;font-size: inherit;color: inherit;
+      @include translate(0 , -50%);
+    }
+    .input_common {padding-right: 30px;}
+  }
+}

@@ -1,0 +1,14 @@
+.search_mobile {display: block;margin: 0 0 15px;
+  @media (min-width: $bp-l) {
+    display: none;
+  }
+}
+.search_mobile_frm {display: flex;
+  .search_mobile_input {width: 100%;border-color: $color-text;border-right: none;
+    @include border-radius(5px 0 0 5px);
+  }
+  .search_mobile_button {border: none;
+    @include border-radius(0 5px 5px 0);
+    i {margin: 0}
+  }
+}

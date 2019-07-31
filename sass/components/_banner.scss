@@ -1,0 +1,30 @@
+.intro_home {background: url("/images/banner-mobile.png") no-repeat 50% 100%; background-size: 100%;min-height: 350px;margin-bottom: 30px;
+  @media (min-width: $bp-md) {
+    min-height: 510px;
+  }
+  @media (min-width: $bp-xl) {
+    background: none;min-height: 600px;
+  }
+}
+.intro_home_body {max-width: 490px;padding: 15px 0;font-weight: $font-regular;
+  @media (min-width: $bp-md) {
+    padding: 50px 0 ;
+  }
+  hr {margin: 15px 0;max-width: 100px;border-width: 2px;border-color: $color-border}
+}
+.intro_home_title {font-size: $font-size-m;text-transform: uppercase;font-weight: 700;
+  @media (min-width: $bp-mobile) {
+      font-size: 28px;
+  }
+}
+.intro_home_des {font-size: $font-size-s;margin-bottom: 10px;
+  @media (min-width: $bp-md) {
+    font-size: 24px;
+  }
+}
+.intro_home_content {font-size: $font-size-xs;
+  @media (min-width: $bp-md) {
+    font-size: $font-size-s;
+  }
+}
+.intro_home_btn {font-size: $font-size-b;padding: 10px 20px}

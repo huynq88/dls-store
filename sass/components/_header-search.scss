@@ -1,0 +1,17 @@
+.header_search {position: relative;display: none;
+  @media (min-width: $bp-xl) {
+    display: block;
+  }
+}
+.header_search_frm {display: flex;align-items: center;
+  &.open {
+    .header_search_input {width: 410px;padding:9px 10px;border: solid 1px $color-text;opacity: 1;visibility: visible}
+    .header_search_button {background: $color-text;color: white}
+  }
+  .header_search_input {width: 0;overflow: hidden;padding: 0;border: none;position: absolute;right: 100%;top:0;font-size: $font-size-b;margin: 0 -2px 0 0;opacity: 0;visibility: hidden;
+    @include transition(all .3s ease);
+  }
+  .header_search_button {background: transparent;border: none;margin: 0;padding: 10px;outline: none;font-size: $font-size-b;min-width: 40px;
+    @include transition(all .3s ease);
+  }
+}

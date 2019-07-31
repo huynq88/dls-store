@@ -1,0 +1,8 @@
+.search_category {}
+.search_category_frm {display: flex;border: solid 1px $color-border;overflow: hidden;
+  @include border-radius(10px);
+}
+.search_category_input {background: white;border: none;padding: 5px 10px;min-width: 200px}
+.search_category_btn {background: $color-border;border: none;outline: none;color: white;padding: 5px 10px;
+  &:hover {background: $color-text}
+}

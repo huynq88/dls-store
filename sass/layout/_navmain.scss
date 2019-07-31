@@ -1,0 +1,125 @@
+#nav_main {font-size: $font-size-s;
+  @media (min-width: $bp-l) {
+    font-size: $font-size-b;
+  }
+}
+.nav_container {position: relative;display: flex;justify-content: flex-end;align-items: center;
+  @include transition(all .3s ease);
+}
+
+/*Nav icon*/
+#humbuger_icon {width: 20px; height: 16px; position: absolute; left: 15px;top: 50%;cursor: pointer;display: block;z-index: 1;
+  @include translate(0,-50%);
+  @media (min-width: $bp-l) {
+    display: none;
+  }
+  span {display: block;position: absolute;height: 2px;width: 100%;background: $color-text;opacity: 1;left: 0;
+    @include transition(all .3s ease-in-out);
+    @include transform(rotate(0deg));
+
+    &:nth-child(1) {top: 0;}
+    &:nth-child(2) {top: 7px;}
+    &:nth-child(3) {top: 7px;}
+    &:nth-child(4) {top: 14px;}
+  }
+  &.open {z-index: 9999}
+  &.open span:nth-child(1) {top: 18px;width: 0;left: 50%;}
+  &.open span:nth-child(2) {@include transform(rotate(45deg));}
+  &.open span:nth-child(3) {@include transform(rotate(-45deg));}
+  &.open span:nth-child(4) {top: 18px;width: 0;left: 50%;}
+}
+
+.navmain_collapse {background: $color-base;position: fixed;top: 62px;left: -100%;overflow-x: hidden;overflow-y: auto;height: 100%;width: 100%;z-index: 9999;justify-content: flex-end;align-items: center;padding: 0 15px;overflow: inherit;
+  @include transition(all 0.3s ease-in-out);
+
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width : $bp-md) and (max-device-width : 1024px) {
+    left: -425px;width: 425px;
+    &.open {
+      @include box-shadow(0px, 10px, 20px, rgba(0,0,0, 0.3));
+      @include transform(translate3d(425px, 0px, 0))
+    }
+  }
+  @media (min-width: $bp-l) {
+    background: inherit;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    position: inherit;
+    width: inherit;
+    left: inherit;
+    padding: inherit;
+    z-index: inherit;
+    font-size: $font-size-m;
+    top: 0;
+
+  }
+  &.open {flex-direction: column;
+    @include transform(translate3d(100%, 0px, 0));
+  }
+}
+
+.navigation_lst {@extend %reset-lst;display: flex;flex: 1;flex-direction: column;padding-bottom: 15px;margin-bottom: 15px;min-height: 60px;border-bottom: solid 1px $color-border;
+  position: relative;
+  @media (min-width: $bp-l) {
+    padding-bottom: 0;margin-bottom: 0;flex-direction: row;border: none;align-items: center;border-bottom: none;min-height: auto;
+  }
+}
+
+.nav_item {display: block;height: auto;line-height: inherit;color: $color-text;position: relative;
+  @include transition(all .3s ease);
+  @media (min-width: $bp-l) {
+    margin: 0;
+    &.active,
+    &:hover {
+      a {color: white;}
+    }
+  }
+  & > a {display: block;padding: 8px 0;
+    @media (min-width: $bp-l) {
+      padding: 15px 25px;
+    }
+    //i {vertical-align: middle;margin: 0 0 0 5px}
+  }
+  &.has_child {
+    &.active,
+    &:hover {
+      @include border-radius(5px 5px 0 0);
+      .mega_menu {opacity: 1;visibility: visible;top: 29px}
+    }
+  }
+}
+
+.overlay {background: transparent;position: fixed;right: 0;top: 0;width: 100%;height: 100%;z-index: 1111;opacity: 0;visibility: hidden;
+  @include transition(all .3s ease-in-out);
+  &.open {opacity: 1;visibility: visible;overflow: hidden}
+}
+
+html.open_menu,
+html.open_menu body {overflow: hidden;}
+
+/*
+.mega_menu {
+  @media (min-width: $bp-xl) {
+    display: flex;z-index: 1111;left: 0;padding: 15px 0;opacity: 0;visibility: hidden;background: $color-text-secondary;position: absolute;top: 40px;min-width: 200px;
+    border: solid 2px white;border-top: none;
+    @include transition(all .3s ease);
+    //@include translate(-50%,0);
+    @include border-radius(5px);
+    @include box-shadow(-2px, 2px, 0px, rgba(35,31,32, 0.1));
+  }
+}
+.mega_menu_col {white-space: nowrap;}
+.mega_menu_title {font-size: $font-size-m;font-weight: $font-bold;margin-bottom: 5px}
+.mega_menu_lst {list-style: none;font-size: $font-size-xs;padding: 0 0 0 10px;
+  @media (min-width: $bp-l) {
+      padding: 0;
+  }
+}
+.mega_menu_item {padding: 2px 0;
+  a {position: relative;padding: 0 0 0 15px;
+    i {position: absolute;left: 5px;top: 3px}
+  }
+}
+*/

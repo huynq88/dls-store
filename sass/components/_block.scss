@@ -1,0 +1,21 @@
+.block_container {margin-bottom: 30px;padding: 0 8px;
+  @media (min-width: $bp-l) {
+    padding: 0;
+  }
+}
+.block_header {position: relative;padding: 15px 90px 15px 0}
+.block_title {font-size: $font-size-b;font-family: $font-bold;color: $color-text;margin: 0;
+  @media (min-width: $bp-md) {
+    font-size: $font-size-2b;
+  }
+}
+.block_title_viewmore {position: absolute;right: 5px;top: 50%;font-size: $font-size-tiny;
+  @include translate(0,-50%);
+  i {margin: 0 0 0 5px}
+  @media (min-width: $bp-md) {
+    font-size: $font-size-m;
+  }
+}
+.block_body {}
+.block_product {position: relative;
+}

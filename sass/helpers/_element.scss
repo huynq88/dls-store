@@ -1,0 +1,67 @@
+//Global
+html, body {height: 100%;}
+a {color: $color-text;text-decoration: none;-webkit-font-smoothing: antialiased;
+  @include transition(color .3s ease);
+  &:hover {
+    color: $color-text-secondary;
+  }
+  &.color_blue,
+  &.color_link {
+    &:hover {color: $color-text}
+  }
+}
+img {max-width: 100%}
+
+//Font Weight
+.font_regular{font-weight: normal}
+.font_bold{font-weight: bold}
+
+.fieldset {border: none;margin: 0;padding: 0}
+//Slide
+
+//Color
+.color_white {color: white}
+.color_blue {color: $color-link}
+.color_link {color: $color-link}
+.color_text {color: $color-text}
+
+//Font Size
+.font_size_tiny,
+.font_size_12 {font-size: $font-size-tiny}
+
+.font_size_xs,
+.font_size_14 {font-size: $font-size-xs}
+
+.font_size_s,
+.font_size_16 {font-size: $font-size-s}
+
+.font_size_m,
+.font_size_18 {font-size: $font-size-m}
+
+.font_size_b,
+.font_size_20 {font-size: $font-size-b}
+
+.font_size_26,
+.font_size_2b {font-size: $font-size-2b}
+
+.font_size_32,
+.font_size_3b {font-size: $font-size-3b}
+
+
+.no-gutters {margin-right: 0;margin-left: 0;
+  > .col,
+  > [class*="col-"] {padding-right: 0;padding-left: 0;}
+}
+
+.clearfix {*zoom: 1;
+  &:before,
+  &:after {content: " ";display: table;}
+  &:after {clear: both;}
+}
+
+
+
+//Main
+.main_body {}
+.main_content {}
+

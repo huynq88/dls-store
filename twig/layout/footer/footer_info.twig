@@ -1,0 +1,51 @@
+{% set footerMenu1 = [
+        'Track Order',
+        'FAQ',
+        'Return & Exchanges',
+        'Terms & Privacy',
+        'DMCA',
+    ]
+%}
+{% set footerMenu2 = [
+    'Sell on Chiczero',
+    'Legacy Login',
+    'Blog',
+    'Contact Us',
+] %}
+
+<div class="row footer_info">
+    <div class="col-lg-3 col-12 footer_col">
+        <h2 class="footer_logo">
+            <a href="#" title="{{ slogan }}"><img src="images/logo-big.svg" alt="{{ slogan }}"></a>
+        </h2>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 footer_col">
+        <h4 class="footer_col_name">Service</h4>
+        <div class="footer_col_body">
+            <ul class="footer_menu">
+                {% for i in footerMenu1 %}
+                    <li class="footer_menu_item"><a href="#" title="{{ i }}">{{ i }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6 footer_col">
+        <h4 class="footer_col_name">Company</h4>
+        <div class="footer_col_body">
+            <ul class="footer_menu">
+                {% for i in footerMenu2 %}
+                    <li class="footer_menu_item"><a href="#" title="{{ i }}">{{ i }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-12 footer_col">
+        <h4 class="footer_col_name">Need Help</h4>
+        <div class="footer_col_body">
+            Support@Chiczero.com <br/>
+            6320 Sunrise Drive <br/>
+            North Richland Hills, TX, 76180 <br/>
+            United States <br/>
+        </div>
+    </div>
+</div>

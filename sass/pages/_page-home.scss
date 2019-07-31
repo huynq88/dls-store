@@ -1,0 +1,19 @@
+#page_home {}
+.home_container-custom {width: 100%;max-width: none;padding-right: 4px;padding-left: 4px;margin-right: auto;margin-left: auto;
+  @media (min-width: $bp-s) {
+    max-width: 540px;
+  }
+
+  @media (min-width: $bp-md) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $bp-l) {
+    max-width: 960px;
+  }
+
+  @media (min-width: $bp-xl) {
+    max-width: 1612px;
+  }
+}
+

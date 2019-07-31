@@ -1,0 +1,16 @@
+#subcribe {background: $color-bg-third;color: $color-text;padding: 25px 15px;
+  @media (min-width: $bp-md) {
+      padding: 0;
+  }
+}
+.subcribe_col {
+  &--left {margin-bottom: 10px}
+  &--right {}
+}
+.subcribe_title {font-size: $font-size-m;margin: 0 0 5px;text-transform: uppercase}
+.subcribe_form {margin: 0 0 15px;}
+.subcribe_text {margin: 0;
+  @media (min-width: $bp-md) {
+
+  }
+}

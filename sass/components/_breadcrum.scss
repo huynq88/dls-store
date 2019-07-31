@@ -1,0 +1,11 @@
+#breadcrums {padding: 5px 0;margin-bottom: 15px;margin-right: 15px;align-items: center;display: none;
+  @media (min-width: $bp-md) {
+    display: flex;
+  }
+}
+.breadcrum_item {margin-right: 10px;
+  a {margin-right: 5px}
+  &--current {color: $color-text}
+}
+i.breadcrum_home {}
+i.breadcrum_arrow {font-size: $font-size-xs}

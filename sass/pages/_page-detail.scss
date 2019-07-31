@@ -1,0 +1,15 @@
+#page_detail {}
+
+.article_container {margin-bottom: 50px}
+.article_header {margin-bottom: 15px}
+.article_title {font-size: $font-size-b;margin-bottom: 15px}
+.article_header_meta {display: flex;margin: 0 0 15px;font-size: $font-size-xs;
+  @media (min-width: $bp-md) {
+    font-size: $font-size-s;
+  }
+  i {margin: 0 5px 0 0}
+}
+.article_publised_date {margin: 0 15px 0 0}
+.article_seen {}
+
+.article_header_summary {}

@@ -1,0 +1,32 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "ProximaNova-Bold";
+  src: url("../../fonts/ProximaNovaBold.eot"); /* IE9 Compat Modes */
+  src: url("../../fonts/ProximaNovaBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../../fonts/ProximaNovaBold.otf") format("opentype"), /* Open Type Font */
+  url("../../fonts/ProximaNovaBold.svg") format("svg"), /* Legacy iOS */
+  url("../../fonts/ProximaNovaBold.ttf") format("truetype"), /* Safari, Android, iOS */
+  url("../../fonts/ProximaNovaBold.woff") format("woff"), /* Modern Browsers */
+  url("../../fonts/ProximaNovaBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url("../../fonts/ProximaNova-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../../fonts/ProximaNova-Regular.otf") format("opentype"), /* Open Type Font */
+  url("../../fonts/ProximaNova-Regular.svg") format("svg"), /* Legacy iOS */
+  url("../../fonts/ProximaNova-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+  url("../../fonts/ProximaNova-Regular.woff") format("woff"), /* Modern Browsers */
+  url("../../fonts/ProximaNova-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$font-base: 'ProximaNova-Regular', sans-serif;
+$font-regular: 'ProximaNova-Regular', sans-serif;
+$font-bold: 'ProximaNova-Bold', sans-serif;
