@@ -1,19 +1,11 @@
-#page_home {}
-.home_container-custom {width: 100%;max-width: none;padding-right: 4px;padding-left: 4px;margin-right: auto;margin-left: auto;
-  @media (min-width: $bp-s) {
-    max-width: 540px;
-  }
+#page_home {
+  .page_home_container{max-width: 100%;
+    @media (min-width: 992px) {
+      &.container-custom {max-width: 960px;}
+    }
 
-  @media (min-width: $bp-md) {
-    max-width: 720px;
-  }
-
-  @media (min-width: $bp-l) {
-    max-width: 960px;
-  }
-
-  @media (min-width: $bp-xl) {
-    max-width: 1612px;
+    @media (min-width: 1200px) {
+      &.container-custom {max-width: 1620px;}
+    }
   }
 }
-

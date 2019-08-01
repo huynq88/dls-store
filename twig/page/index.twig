@@ -5,9 +5,14 @@
     <div id="page_home" class="page_main">
         {% include "../layout/header.twig" %}
         <div class="main_body">
-            <div class="container-custom">
+            <div class="page_home_container container-custom">
+                {% include '../component/banner_home.twig' %}
                 {% include '../component/block_product_style1.twig' %}
                 {% include '../component/block_product_style2.twig' %}
+                {% include '../component/block_product_style3.twig' %}
+                {% include '../component/block_product_style4.twig' %}
+                {% include '../component/block_product_style5.twig' %}
+                {% include '../component/block_product_style6.twig' %}
             </div>
         </div>
         {% include "../layout/footer/footer.twig" %}

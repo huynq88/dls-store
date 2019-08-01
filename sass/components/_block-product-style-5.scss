@@ -1,1 +1,17 @@
-.block_product_style_5 {}
+.block_product_style_5 {
+  .product_list {
+    .product_item {
+      @media (min-width: $bp-laptop) {
+
+      }
+    }
+  }
+  .product_banner {margin-bottom: 16px;
+    @include responsive-ratio(320 , 160);
+    @media (min-width: $bp-laptop) {
+      @include responsive-ratio(1612 , 400);
+    }
+  }
+  .product_banner_info {left: 0;bottom: 5%}
+
+}

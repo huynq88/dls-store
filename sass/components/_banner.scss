@@ -1,30 +1,37 @@
-.intro_home {background: url("/images/banner-mobile.png") no-repeat 50% 100%; background-size: 100%;min-height: 350px;margin-bottom: 30px;
-  @media (min-width: $bp-md) {
-    min-height: 510px;
+.banner {
+  //Custom Slide
+  &:hover {
+    .slick-arrow {opacity: 1;visibility: visible;
+      &.slick-next {right: 15px}
+      &.slick-prev {left: 15px}
+    }
   }
-  @media (min-width: $bp-xl) {
-    background: none;min-height: 600px;
+  .slick-arrow {text-indent: -999em;font-size: 0;width: 60px;height: 60px;z-index: 1;opacity: 0;visibility: hidden;
+    @include transition(all .3s ease);
+    &::before {content: none}
+    &.slick-next {background: url("../../images/slick-arr-next.svg") no-repeat 50% 50%;right: 0}
+    &.slick-prev {background: url("../../images/slick-arr-prev.svg") no-repeat 50% 50%;left: 0}
+  }
+  .slick-dots {bottom: -30px;
+    li {
+      &.slick-active {color: $color-link-secondary;
+        button {
+          &::before {background: $color-link}
+        }
+      }
+      button {
+        &::before {content: '';background: white;width: 8px;height: 8px;display: block;position: inherit;border: solid 1px $color-border;opacity: 1;margin: 0 auto;
+          @include border-radius(50%);
+        }
+      }
+    }
   }
 }
-.intro_home_body {max-width: 490px;padding: 15px 0;font-weight: $font-regular;
-  @media (min-width: $bp-md) {
-    padding: 50px 0 ;
+.banner_container {}
+.banner_item {padding: 0 4px}
+.banner_item_thumb {position: relative;font-size: 0;display: block;
+  &::before {content: '';display: block;
+    @include responsive-ratio(532,532);
   }
-  hr {margin: 15px 0;max-width: 100px;border-width: 2px;border-color: $color-border}
+  img {position: absolute;width: 100%;height: 100%;object-fit: cover;top: 0;left: 0}
 }
-.intro_home_title {font-size: $font-size-m;text-transform: uppercase;font-weight: 700;
-  @media (min-width: $bp-mobile) {
-      font-size: 28px;
-  }
-}
-.intro_home_des {font-size: $font-size-s;margin-bottom: 10px;
-  @media (min-width: $bp-md) {
-    font-size: 24px;
-  }
-}
-.intro_home_content {font-size: $font-size-xs;
-  @media (min-width: $bp-md) {
-    font-size: $font-size-s;
-  }
-}
-.intro_home_btn {font-size: $font-size-b;padding: 10px 20px}
