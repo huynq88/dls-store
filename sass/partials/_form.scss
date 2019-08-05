@@ -1,0 +1,9 @@
+.frm_common {margin-bottom: 25px;
+  .frm_fieldset {border: none;margin: 0 0 25px;padding: 0;
+    &:last-child {margin: 0}
+  }
+  .frm_label {margin: 0 0 10px;font-family: $font-bold;display: inline-block}
+  .frm_row {margin-bottom: 15px;
+    &:last-child {margin: 0}
+  }
+}

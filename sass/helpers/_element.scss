@@ -11,6 +11,7 @@ a {color: $color-text;text-decoration: none;-webkit-font-smoothing: antialiased;
   }
 }
 img {max-width: 100%}
+b,strong {font-family: $font-bold}
 
 //Font Weight
 .font_regular{font-weight: normal}
@@ -24,6 +25,7 @@ img {max-width: 100%}
 .color_blue {color: $color-link}
 .color_link {color: $color-link}
 .color_text {color: $color-text}
+.color_text_secondary {color: $color-text-secondary}
 
 //Font Size
 .font_size_tiny,

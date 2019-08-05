@@ -1,0 +1,157 @@
+{% extends "../layout/layout.twig" %}
+{% block pageTitle %} Check out {% endblock %}
+{% block pageDes %}{{ slogan }}{% endblock %}
+{% block page %}
+    <div id="page_checkout" class="page_main">
+        {% include "../layout/header.twig" %}
+        <div class="main_body">
+            <div class="container checkout_container">
+                <div class="row">
+                    <div class="col-md-6 checkout_col checkout_col--left">
+                        <h1 class="checkout_title">Check out</h1>
+                        <form action="" class="frm_common checkout_frm">
+                            <fieldset class="frm_fieldset">
+                                <label for="" class="frm_label">Contact Info</label>
+                                <div class="frm_row">
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="Email address"/>
+                                </div>
+                                <div class="frm_row">
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="Phone number"/>
+                                </div>
+                            </fieldset>
+                            <fieldset class="frm_fieldset">
+                                <label for="" class="frm_label">Shipping Info</label>
+                                <div class="frm_row">
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="Full name"/>
+                                </div>
+                                <div class="frm_row d-flex">
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="Address" id="checkout_input_address"/>
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="Apt, Suite" id="checkout_input_address2"/>
+                                </div>
+                                <div class="frm_row">
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="City"/>
+                                </div>
+                                <div class="frm_row d-flex">
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="Province" id="checkout_input_province"/>
+                                    <input type="text" class="input_common input_common--medium checkout_input" placeholder="Zip" id="checkout_input_zip"/>
+                                </div>
+                                <div class="frm_row">
+                                    <div class="select_wrap">
+                                        <select name="" id="" class="select_common">
+                                            <option value="">Viet Nam</option>
+                                            <option value="">Viet Nam</option>
+                                            <option value="">Viet Nam</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="frm_fieldset">
+                                <label for="" class="frm_label">Payment Info</label>
+                                <div class="checkout_method">
+                                    <div class="checkout_method_card">
+                                        <div class="checkout_method_header">
+                                            <h4 class="checkout_method_name">Card</h4>
+                                            <div class="checkout_method_card_thumb">
+                                                <img src="../../images/card-master.svg" alt="Master"/>
+                                                <img src="../../images/card-ae.svg" alt="America express"/>
+                                                <img src="../../images/card-discover.svg" alt="Discovery"/>
+                                                <img src="../../images/card-visa.svg" alt="Visa"/>
+                                            </div>
+                                        </div>
+                                        <div class="checkout_method_body">
+                                            <div class="checkout_card_input">
+                                                <span class="checkout_card_type">
+                                                    <img src="../../images/card-type.svg" alt=""/>
+                                                </span>
+                                                <input type="text" class="checkout_card_info" id="checkout_card_info_number" placeholder="Card number"/>
+                                                <input type="text" class="checkout_card_info" id="checkout_card_info_date" placeholder="MM / YY"/>
+                                                <input type="text" class="checkout_card_info" id="checkout_card_info_cvc" placeholder="CVC"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout_method_paypal">
+                                        <div class="checkout_method_header">
+                                            <h4 class="checkout_method_name">PayPal</h4>
+                                            <div class="checkout_method_card_thumb">
+                                                <img src="../../images/paypal.svg" alt="Paypal"/>
+                                            </div>
+                                        </div>
+                                        <div class="checkout_method_body">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="frm_fieldset">
+                                <div>i have a promo code</div>
+                                <button type="submit" class="button_primary button_full">Place Your Order</button>
+                            </fieldset>
+                            <div class="checkout_agree">
+                                <p>
+                                    By clicking 'Place Your Order' you agree to our Privacy policy and Terms of service. You also agree to receive periodic email updates, discounts, and special offers.
+                                </p>
+                                <p>
+                                    This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                                </p>
+                                <div class="checkout_agree_confirm">
+                                    <input type="checkbox" id="checkout_agree_checkbox"/>
+                                    <label for="checkout_agree_checkbox">I would like to receive emails about new products directly from these sellers or any licensed partners</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 col-lg-5 offset-lg-1 checkout_col checkout_col--right">
+                        <div class="checkout_order">
+                            <div class="checkout_order_header">
+                                <h2 class="checkout_order_title">Order Summary</h2>
+                                <a href="#" class="checkout_order_edit">Edit Cart</a>
+                            </div>
+                            <div class="checkout_order_body">
+                                {% for i in 0..2 %}
+                                    <div class="checkout_order_item">
+                                        <a href="#" class="checkout_order_thumb" title="">
+                                            <img src="https://via.placeholder.com/500x500" alt="">
+                                        </a>
+                                        <div class="checkout_order_info">
+                                            <h2 class="checkout_order_name"><a href="#" title="">(Medium) Unisex Short Sleeve Class...</a></h2>
+                                            <div class="checkout_order_attr">Qty: 1 • Size: M • Color: Green</div>
+                                        </div>
+                                        <div class="checkout_order_price">
+                                            $26,99
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="checkout_order_footer">
+                                <table class="checkout_order_tbl">
+                                    <tr>
+                                        <td>Subtotal</td>
+                                        <td>$77.89</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discount &nbsp;&nbsp; <strong class="color_text_secondary">100FF</strong></td>
+                                        <td>-$7.89</td>
+                                    </tr>
+                                    <tr>
+                                        <td>shipping</td>
+                                        <td>$4.99</td>
+                                    </tr>
+                                    <tr class="last">
+                                        <td>
+                                            <strong class="color_text_secondary">Total:</strong>
+                                        </td>
+                                        <td>
+                                            <strong class="color_text_secondary">$75.10</strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "../layout/footer/footer.twig" %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,76 @@
+{% extends "../layout/layout.twig" %}
+{% block pageTitle %} Cart {% endblock %}
+{% block pageDes %}{{ slogan }}{% endblock %}
+{% block page %}
+    <div id="page_cart" class="page_main">
+        {% include "../layout/header.twig" %}
+        <div class="main_body">
+            <div class="cart_container container">
+                <div class="cart_top">
+                    <a href="#" class="cart_top_continue">Continue Shopping</a>
+                </div>
+                <div class="row cart_body">
+                    <div class="col-lg-4 col-md-5 offset-lg-1 order-md-last cart_col cart_col--left">
+                        <div class="cart_promocode">
+                            <form action="" class="cart_promocode_frm">
+                                <input type="text" placeholder="Promo code" class="input_common cart_promocode_input" />
+                                <button type="submit" class="cart_promocode_apply">Apply</button>
+                            </form>
+                        </div>
+                        <div class="cart_subtotal">
+                            <h3 class="cart_subtotal_title">Cart Subtotal <span>[ 5 item ]</span></h3>
+                            <p class="cart_subtotal_text">Shipping and tax will be calculated on checkout</p>
+                            <div class="cart_subtotal_price">
+                                <strong>$ 134.95</strong>
+                            </div>
+                            <button class="button_primary button_full cart_subtotal_btn">Secure Checkout</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 cart_col cart_col--right">
+                        <div class="cart_list">
+                            <h3 class="cart_list_title">Order Summary</h3>
+                            <div class="cart_group_item">
+                                {% for i in 0..4 %}
+                                    <div class="cart_item">
+                                        <div class="cart_item_inner">
+                                            <a href="#" class="cart_thumb" title="">
+                                                <img src="https://via.placeholder.com/500x500" alt=""/>
+                                            </a>
+                                            <div class="cart_info">
+                                                <h2 class="cart_name"><a href="#" title="">(Medium) Unisex Short Sleeve Class...</a></h2>
+                                                <div class="cart_attr">Qty: 1 • Size: M • Color: Green</div>
+                                            </div>
+                                            <div class="cart_quantity">1 x <strong>$ 26,99</strong></div>
+                                            <a href="javascript:void(0)" class="cart_edit_btn">Edit</a>
+                                        </div>
+                                        <div class="cart_item_editor">
+                                            <div class="cart_item_editor_item">
+                                                <select name="" id="">
+                                                    <option value="">S</option>
+                                                    <option value="">M</option>
+                                                    <option value="">L</option>
+                                                </select>
+                                            </div>
+                                            <div class="cart_item_editor_item">
+                                                <div class="quantity_box">
+                                                    <button type="button" class="quantity_box_btn quantity_box--minus">-</button>
+                                                    <input class="quantity_box_input" type="number" value="1" min="1">
+                                                    <button type="button" class="quantity_box_btn quantity_box--plus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                {% include '../component/block_suggest.twig' %}
+            </div>
+        </div>
+        {% include "../layout/footer/footer.twig" %}
+    </div>
+{% endblock %}
+

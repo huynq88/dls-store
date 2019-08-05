@@ -156,6 +156,17 @@ quantityBox = () => {
         }
     });
 };
+editCartItem = () => {
+    let edit = $('.cart_edit_btn');
+    edit.click(function () {
+        $(this).parent().next('.cart_item_editor').slideToggle('fast');
+        if ($(this).text() === "Edit") {
+            $(this).text('Cancel');
+        } else {
+            $(this).text('Edit');
+        }
+    });
+};
 
 $(document).ready(function () {
     //preloader ();
@@ -164,4 +175,5 @@ $(document).ready(function () {
     openHeaderSearch();
     productAlbum ();
     quantityBox ();
+    editCartItem ();
 });
