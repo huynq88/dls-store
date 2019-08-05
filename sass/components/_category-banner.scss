@@ -1,0 +1,13 @@
+.category_banner {position: relative;margin-bottom: 30px}
+.category_banner_thumb {background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;display: block;margin: 0;
+  &::before {content: '';display: block;@include responsive-ratio(320,160);
+    @media (min-width: $bp-md) {
+      @include responsive-ratio(1180,270);
+    }
+  }
+  img {position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover}
+}
+.category_banner_name {position: absolute;left: 50%;top: 50%;margin: 0;color: white;font-size: $font-size-2b;
+  @include translate(-50%,-50%);
+  @include text-shadow (2px, 0, 1px, rgba(0,0,0, 0.25));
+}

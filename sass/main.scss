@@ -12,6 +12,7 @@
 
 // Components and modules
 @import "components/_banner";
+@import "components/_category-banner";
 @import "components/_header-search";
 @import "components/_mobile-search";
 @import "components/_breadcrum";
@@ -19,8 +20,11 @@
 @import "components/_subcribe";
 @import "components/_copy-right";
 @import "components/_language";
-@import "components/_block";
+@import "components/_quantity-box";
 @import "components/_product-list";
+@import "components/_product-album";
+
+@import "components/_block";
 @import "components/_block-product-style-1";
 @import "components/_block-product-style-2";
 @import "components/_block-product-style-3";

@@ -62,6 +62,10 @@ img {max-width: 100%}
 
 
 //Main
-.main_body {}
+.page_main {}
+.page_name {text-align: center;padding: 40px 0}
+.page_title {margin: 0;font-size: 48px;color: $color-text}
+
+.main_body {margin-bottom: 30px}
 .main_content {}
 

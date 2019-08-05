@@ -1,0 +1,25 @@
+.album {position: relative;}
+.album_full {margin-bottom: 15px;display: none;
+  &.slick-initialized {display: block}
+}
+.album_full_thumb {background: $color-bg-secondary;display: block;position: relative;margin: 0;
+  &::before {content: '';display: block;
+    @include responsive-ratio(90,90);
+  }
+  img {width: 100%;height: 100%;object-fit: cover;position: absolute;left: 0;top: 0}
+}
+
+.album_thumb_lst {overflow: hidden;display: none;
+  &.slick-initialized {display: block;}
+  @media (min-width: $bp-l) {
+
+  }
+}
+.album_thumb_item {display: block;overflow: hidden;position: relative;margin: 0 0 8px;border: solid 1px transparent;
+  &:last-child {margin:  0}
+  &::before {content: '';display: block;
+    @include responsive-ratio(90,90);
+  }
+  img {width: 100%;height: 100%;object-fit: cover;position: absolute;left: 0;top: 0}
+  &.slick-current {border-color: $color-text;}
+}

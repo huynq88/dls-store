@@ -1,0 +1,9 @@
+.quantity_box {display: flex}
+.quantity_box_btn {
+  &--plus {}
+  &--minus {}
+}
+.quantity_box_input {-moz-appearance: textfield;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {-webkit-appearance: none;margin: 0;}
+}

@@ -56,7 +56,6 @@ bannerHomeSlide = () => {
                     slidesToShow: 2,
                 }
             },
-
         ]
     });
 };
@@ -90,9 +89,79 @@ openHeaderSearch = () => {
     });
 };
 
+
+productAlbum = () => {
+    $('.album_full').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.album_thumb_lst',
+        draggable: false,
+        touchMove: false,
+        swipe: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    draggable: false,
+                    touchMove: false,
+                    swipe: false,
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    dots: true,
+                    draggable: true,
+                    touchMove: true,
+                    swipe: true,
+                }
+            },
+        ]
+    });
+    $('.album_thumb_lst').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        asNavFor: '.album_full',
+        arrows: true,
+        focusOnSelect: true,
+        vertical: true,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    vertical: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                }
+            },
+        ]
+    });
+};
+quantityBox = () => {
+    let currentVal = $(this).prev().val();
+    $('.quantity_box--plus').click(function () {
+        if (isNaN(currentVal)) {
+            $(this).prev().val(+$(this).prev().val() + 1);
+        }
+    });
+    $('.quantity_box--minus').click(function () {
+        if ($(this).next().val() > 1) {
+            if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+        }
+    });
+};
+
 $(document).ready(function () {
     //preloader ();
     overlayIconMobile ();
     bannerHomeSlide();
     openHeaderSearch();
+    productAlbum ();
+    quantityBox ();
 });

@@ -1,0 +1,128 @@
+{% extends "../layout/layout.twig" %}
+{% block pageTitle %}Product Detail {% endblock %}
+{% block pageDes %}{{ slogan }}{% endblock %}
+{% block page %}
+    <div id="page_product_detail" class="page_main">
+        {% include "../layout/header.twig" %}
+        <div class="main_body">
+            {% include "../layout/breadcrum.twig" %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 product_detail_col product_detail_col--left ">
+                        <h1 class="product_detail_name product_detail_name--mobile">Nipsey Bh</h1>
+                        {% include '../component/product_album.twig' %}
+                    </div>
+
+                    <div class="col-lg-5 offset-lg-1 product_detail_col product_detail_col--right">
+                        <div class="product_detail_header">
+                            <h1 class="product_detail_name product_detail_name--pc">Nipsey Bh</h1>
+                            <div class="product_detail_tutorial">
+                                Secure Checkout <br/>
+                                SHARE & order with your friends &  save on shipping. <br/>
+                                <strong>Click on the button the select size and order.</strong> <br/>
+                                <strong>Need Help?</strong><a href="mailto:support@teespring.com">support@teespring.com</a><br/>
+                                Guaranteed safe and secure checkout via:
+                            </div>
+                        </div>
+                        <form action="" class="product_selector_form">
+                            <div class="product_selector_container">
+                                <div class="product_selector_inner">
+                                    <div class="product_selector_row product_selector--type">
+                                        <div class="product_selector_title">
+                                            Available Products:
+                                        </div>
+                                        <div class="product_selector_body">
+                                            <div class="product_selector--type_group">
+                                                {% for i in 0..4 %}
+                                                    <a href="" title="" class="product_selector--type_thumb">
+                                                        <img src="https://via.placeholder.com/500x500" alt=""/>
+                                                    </a>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product_selector_row product_selector--more">
+                                        <a href="#">Show More Details</a>
+                                        <a href="#">Size Chart</a>
+                                    </div>
+                                    <div class="product_selector_row product_selector--size">
+                                        <div class="product_selector_title">
+                                            Size
+                                        </div>
+                                        <div class="product_selector_body">
+                                            <div class="product_selector--size_group">
+                                                <a href="#" class="product_selector--size_item active">XS</a>
+                                                <a href="#" class="product_selector--size_item">S</a>
+                                                <a href="#" class="product_selector--size_item">M</a>
+                                                <a href="#" class="product_selector--size_item">L</a>
+                                                <a href="#" class="product_selector--size_item">XL</a>
+                                                <a href="#" class="product_selector--size_item">2XL</a>
+                                                <a href="#" class="product_selector--size_item">3XL</a>
+                                                <a href="#" class="product_selector--size_item">4XL</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product_selector_row product_selector--color">
+                                        <div class="product_selector_title">
+                                            Color
+                                        </div>
+                                        <div class="product_selector_body">
+                                            <div class="product_selector--color_group">
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #0b2e13"></span>
+                                                </a>
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #b1dfbb"></span>
+                                                </a>
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #f1b0b7"></span>
+                                                </a>
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #117a8b"></span>
+                                                </a>
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #0b2e13"></span>
+                                                </a>
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #a71d2a"></span>
+                                                </a>
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #e0a800"></span>
+                                                </a>
+                                                <a class="product_selector--color_item" href="#">
+                                                    <span style="background-color: #9fcdff"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product_selector_row product_selector--quantity">
+                                        <div class="product_selector_title">
+                                            Quantity
+                                        </div>
+                                        <div class="product_selector_body">
+                                            <div class="quantity_box">
+                                                <button type="button" class="quantity_box_btn quantity_box--minus">-</button>
+                                                <input class="quantity_box_input" type="number" value="1" min="1" />
+                                                <button type="button" class="quantity_box_btn quantity_box--plus">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_selector_form_bottom">
+                                <div>
+                                    <button type="submit">Add to cart</button>
+                                </div>
+                                <div class="product_selector_form_paycard">
+                                    <img src="../../images/pay-card.svg" alt=""/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "../layout/footer/footer.twig" %}
+    </div>
+{% endblock %}
+
