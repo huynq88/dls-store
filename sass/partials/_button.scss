@@ -1,5 +1,4 @@
 @mixin button_common {display: inline-block;text-align: center;outline: none;padding: 5px 10px;overflow: hidden;border: solid 1px $color-text;cursor: pointer;
-  @include border-radius(4px);
   @include transition(all .3s ease);
   img {margin-right: 5px;vertical-align: middle;width: inherit}
   i {vertical-align: middle;
@@ -7,11 +6,11 @@
     &:only-child {margin: 0}
   }
 
-  &.button_micro {font-size: $font-size-xs;min-height: 24px;@include border-radius(4px);}
-  &.button_tiny {font-size: $font-size-s;min-height: 28px;@include border-radius(4px);}
-  &.button_small {font-size: $font-size-m;min-height: 32px;@include border-radius(6px);}
-  &.button_regular {font-size: $font-size-m;min-height: 36px;line-height: 28px;@include border-radius(6px);}
-  &.button_large {font-size: $font-size-m;min-height: 40px;line-height: 28px;@include border-radius(8px);}
+  &.button_micro {font-size: $font-size-xs;min-height: 24px;}
+  &.button_tiny {font-size: $font-size-s;min-height: 28px;}
+  &.button_small {font-size: $font-size-m;min-height: 32px;}
+  &.button_regular {font-size: $font-size-m;min-height: 36px;line-height: 28px;}
+  &.button_large {font-size: $font-size-m;min-height: 40px;line-height: 28px;}
   &.button_full {display: block;width: 100%}
 
   &.disabled,

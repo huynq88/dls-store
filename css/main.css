@@ -1411,10 +1411,6 @@ input[type="checkbox"] {
   overflow: hidden;
   border: solid 1px #282364;
   cursor: pointer;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease; }
@@ -1430,41 +1426,21 @@ input[type="checkbox"] {
       margin: 0; }
   .button_primary.button_micro {
     font-size: 14px;
-    min-height: 24px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 24px; }
   .button_primary.button_tiny {
     font-size: 16px;
-    min-height: 28px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 28px; }
   .button_primary.button_small {
     font-size: 18px;
-    min-height: 32px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 32px; }
   .button_primary.button_regular {
     font-size: 18px;
     min-height: 36px;
-    line-height: 28px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    line-height: 28px; }
   .button_primary.button_large {
     font-size: 18px;
     min-height: 40px;
-    line-height: 28px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    line-height: 28px; }
   .button_primary.button_full {
     display: block;
     width: 100%; }
@@ -1488,10 +1464,6 @@ input[type="checkbox"] {
   overflow: hidden;
   border: solid 1px #282364;
   cursor: pointer;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1509,41 +1481,21 @@ input[type="checkbox"] {
       margin: 0; }
   .button_secondary.button_micro {
     font-size: 14px;
-    min-height: 24px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 24px; }
   .button_secondary.button_tiny {
     font-size: 16px;
-    min-height: 28px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 28px; }
   .button_secondary.button_small {
     font-size: 18px;
-    min-height: 32px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 32px; }
   .button_secondary.button_regular {
     font-size: 18px;
     min-height: 36px;
-    line-height: 28px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    line-height: 28px; }
   .button_secondary.button_large {
     font-size: 18px;
     min-height: 40px;
-    line-height: 28px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    line-height: 28px; }
   .button_secondary.button_full {
     display: block;
     width: 100%; }
@@ -1567,10 +1519,6 @@ input[type="checkbox"] {
   overflow: hidden;
   border: solid 1px #282364;
   cursor: pointer;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1589,41 +1537,21 @@ input[type="checkbox"] {
       margin: 0; }
   .button_secondary_gray.button_micro {
     font-size: 14px;
-    min-height: 24px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 24px; }
   .button_secondary_gray.button_tiny {
     font-size: 16px;
-    min-height: 28px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 28px; }
   .button_secondary_gray.button_small {
     font-size: 18px;
-    min-height: 32px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    min-height: 32px; }
   .button_secondary_gray.button_regular {
     font-size: 18px;
     min-height: 36px;
-    line-height: 28px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    line-height: 28px; }
   .button_secondary_gray.button_large {
     font-size: 18px;
     min-height: 40px;
-    line-height: 28px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
+    line-height: 28px; }
   .button_secondary_gray.button_full {
     display: block;
     width: 100%; }
@@ -2489,13 +2417,21 @@ html.open_menu body {
 .checkout_method_card .checkout_card_type {
   display: block;
   font-size: 0;
-  margin: 0 5px 0 0; }
+  margin: 0 5px 0 0;
+  width: 30px; }
 
 .checkout_method_card .checkout_card_info {
-  border: none; }
+  border: none;
+  width: 100%; }
+  .checkout_method_card .checkout_card_info#checkout_card_info_date {
+    width: 70px; }
+  .checkout_method_card .checkout_card_info#checkout_card_info_cvc {
+    width: 50px; }
 
-.checkout_method_card_thumb img {
-  margin: 0 5px; }
+.checkout_method_card_thumb {
+  font-size: 0; }
+  .checkout_method_card_thumb img {
+    margin: 0 5px; }
 
 .checkout_order {
   background: #F0F0F0;

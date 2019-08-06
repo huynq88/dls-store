@@ -29,16 +29,16 @@
 
 .checkout_method_card {
   .checkout_card_input {background: white;display: flex;align-items: center;border: solid 1px $color-border;padding: 7px}
-  .checkout_card_type {display: block;font-size: 0;margin: 0 5px 0 0;
+  .checkout_card_type {display: block;font-size: 0;margin: 0 5px 0 0;width: 30px;
     img {}
   }
-  .checkout_card_info {border: none;
+  .checkout_card_info {border: none;width: 100%;
     &#checkout_card_info_number {}
-    &#checkout_card_info_date {}
-    &#checkout_card_info_cvc {}
+    &#checkout_card_info_date {width: 70px}
+    &#checkout_card_info_cvc {width: 50px}
   }
 }
-.checkout_method_card_thumb {
+.checkout_method_card_thumb {font-size: 0;
   img {margin: 0 5px}
 }
 .checkout_method_paypal {}
